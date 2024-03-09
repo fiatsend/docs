@@ -1,0 +1,17 @@
+{
+    "index": "Start here",
+    "core-concepts": "Core Concepts",
+    "guides": "Guides",
+    "resources": "Resources",
+    "features": "Features",
+    "about": {
+        "title": "About",
+        "type": "page"
+    },
+    "contact": {
+        "title": "Contact ↗",
+        "type": "page",
+        "href": "https://twitter.com/fiatsend",
+        "newWindow": true
+    }
+}
