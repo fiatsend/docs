@@ -3,6 +3,7 @@ export default {
     project: {
         link: 'https://github.com/fiatsend'
     },
+    docsRepositoryBase: 'https://github.com/fiatsend/docs'
     // editLink: {
     //     component: {
     //         file
