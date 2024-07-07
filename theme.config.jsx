@@ -30,7 +30,8 @@ export default {
         return (
             <>
                 <meta property="og:url" content={url} />
-                <meta property="og:title" content={frontMatter.tite || 'Fiatsend Docs'} />
+                <meta property="og:title" content={frontMatter.title || 'Fiatsend Docs'} />
+                <meta property="og:title" content={frontMatter.image || 'https://www.fiatsend.com/images/fiatsend.png'} />
                 <meta
                     property="og:description"
                     content={frontMatter.description || 'A detailed documentation about Fiatsend'}
