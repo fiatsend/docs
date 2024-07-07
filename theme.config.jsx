@@ -33,7 +33,7 @@ export default {
                 <meta property="og:title" content={frontMatter.tite || 'Fiatsend Docs'} />
                 <meta
                     property="og:description"
-                    content={frontMatter.description || 'Send money with ease'}
+                    content={frontMatter.description || 'A detailed documentation about Fiatsend'}
                 />
             </>
         )
