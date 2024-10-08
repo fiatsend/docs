@@ -1,17 +1,18 @@
 {
-    "index": "Start here",
-    "core-concepts": "Core Concepts",
-    "guides": "Guides",
-    "resources": "Resources",
-    "features": "Features",
-    "about": {
-        "title": "About",
-        "type": "page"
-    },
-    "contact": {
-        "title": "Contact ↗",
-        "type": "page",
-        "href": "https://twitter.com/fiatsend",
-        "newWindow": true
-    }
+  "index": "Start here",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "getting-started": "Getting Started",
+  "guides": "Guides",
+  "security": "Security",
+  "resources": "Resources",
+  "legal": "Legal",
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/fiatsend",
+    "newWindow": true
+  }
 }
