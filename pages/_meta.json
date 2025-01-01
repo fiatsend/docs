@@ -1,10 +1,7 @@
 {
   "index": "Start here",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
   "getting-started": "Getting Started",
+  "fiatsend-assets": "Fiatsend Assets",
   "guides": "Guides",
   "security": "Security",
   "resources": "Resources",
