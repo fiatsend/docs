@@ -1,5 +1,12 @@
 {
   "index": "Start here",
+  "network": "Network",
+  "network-participants": {
+    "users": "Users",
+    "marchants": "Merchants",
+    "agents": "Agents",
+    "liquidity-providers": "Liquidity Providers"
+  },
   "getting-started": "Getting Started",
   "fiatsend-assets": "Fiatsend Assets",
   "guides": "Guides",

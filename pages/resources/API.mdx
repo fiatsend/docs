@@ -1,3 +1,114 @@
-# API
+export const metadata = {
+  title: "Fiatsend APIs & SDKs",
+  description:
+    "Explore the APIs and SDKs that power the Fiatsend ecosystem, enabling seamless fiat-to-crypto transactions and integrations.",
+};
 
-FiatSend allows you to integrate our APIs into your business APIs for different purposes. Explore different use cases used by some companies.
+# **Fiatsend APIs & SDKs**
+
+Fiatsend provides a robust suite of **APIs and SDKs** that empower developers, businesses, and financial institutions to integrate fiat-to-crypto transactions into their applications. These tools enable seamless interaction with the Fiatsend Network, ensuring security, reliability, and compliance.
+
+---
+
+## **1. Fiatsend API**
+
+The **Fiatsend API** is designed to facilitate **real-time fiat and crypto transactions**, allowing businesses, merchants, and agents to interact with the network programmatically.
+
+### **Key Features:**
+
+- **User Account Management**: Create and manage user accounts programmatically.
+- **Transaction Processing**: Send, receive, and convert funds across fiat and stablecoins.
+- **On-Ramp & Off-Ramp Integration**: Enable seamless cash-in and cash-out functionality.
+- **KYC & Compliance Services**: Automated identity verification and AML checks.
+- **Real-time Exchange Rates**: Access live conversion rates for fiat and crypto pairs.
+- **Merchant Payments**: Process crypto payments and settle in fiat instantly.
+- **Webhooks & Notifications**: Receive event-driven updates for transactions and user actions.
+
+### **API Endpoints:**
+
+```json
+GET /api/v1/accounts/{user_id} // Retrieve user account details
+POST /api/v1/transactions // Initiate a transaction
+GET /api/v1/rates // Fetch real-time exchange rates
+POST /api/v1/kyc // Submit KYC verification data
+```
+
+For full API documentation, refer to: **[API Docs Placeholder]**
+
+---
+
+## **2. Fiatsend SDKs**
+
+To streamline development, Fiatsend provides **SDKs** in multiple programming languages, allowing developers to quickly integrate its services.
+
+### **Available SDKs:**
+
+| SDK                 | Language                | Usage                         |
+| ------------------- | ----------------------- | ----------------------------- |
+| Fiatsend JS SDK     | JavaScript / TypeScript | Web & Node.js applications    |
+| Fiatsend Python SDK | Python                  | Backend services & automation |
+| Fiatsend Mobile SDK | Kotlin / Swift          | Android & iOS integration     |
+
+### **Installation & Setup:**
+
+#### **JavaScript SDK**
+
+```bash
+npm install @fiatsend/sdk
+```
+
+#### **Python SDK**
+
+```bash
+pip install fiatsend-sdk
+```
+
+#### **Basic Usage (JS Example)**
+
+```javascript
+import Fiatsend from "@fiatsend/sdk";
+
+const fiatsend = new Fiatsend({ apiKey: "your-api-key" });
+
+async function getBalance(userId) {
+  const balance = await fiatsend.getBalance(userId);
+  console.log(balance);
+}
+```
+
+---
+
+## **3. Use Cases & Integrations**
+
+### **For Merchants:**
+
+- Accept crypto payments and settle in fiat instantly.
+- Automate invoicing and transaction tracking.
+
+### **For Wallets & Exchanges:**
+
+- Provide fiat on-ramp and off-ramp services.
+- Offer real-time conversions between fiat and stablecoins.
+
+### **For Agents & Liquidity Providers:**
+
+- Facilitate cash deposits and withdrawals.
+- Provide liquidity for seamless transactions.
+
+---
+
+## **4. Security & Compliance**
+
+- **End-to-End Encryption**: Secure API calls and transaction data.
+- **OAuth & API Key Authentication**: Secure access control for integrations.
+- **Regulatory Compliance**: Built-in KYC/AML support for businesses.
+
+---
+
+## **Next Steps**
+
+Ready to build with Fiatsend? Explore the full API documentation and start integrating today!
+
+📖 **[API Documentation Placeholder]**
+
+🚀 **Join our developer community on [Discord Placeholder]**
