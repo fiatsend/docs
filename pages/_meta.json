@@ -1,14 +1,9 @@
 {
-  "index": "Start here",
+  "index": "Introduction",
   "network": "Network",
-  "network-participants": {
-    "users": "Users",
-    "marchants": "Merchants",
-    "agents": "Agents",
-    "liquidity-providers": "Liquidity Providers"
-  },
-  "getting-started": "Getting Started",
+  "network-participants": "Network Participants",
   "fiatsend-assets": "Fiatsend Assets",
+  "fiatsend-points": "Fiatsend Points",
   "guides": "Guides",
   "contracts": "Contracts",
   "resources": "Resources",
