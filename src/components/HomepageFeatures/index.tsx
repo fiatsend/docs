@@ -13,9 +13,9 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Fast integration',
-    iconSrc: 'img/icon-white.png',
-    iconAlt: 'Fiatsend icon',
+    title: 'Fast Integration',
+    iconSrc: 'img/fiatsend-mark.svg',
+    iconAlt: '',
     description: (
       <>
         Go from API keys to first payout quickly with clear guides, examples, and
@@ -24,9 +24,9 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Mobile money coverage',
-    iconSrc: 'img/icon-white.png',
-    iconAlt: 'Fiatsend icon',
+    title: 'Mobile Money Coverage',
+    iconSrc: 'img/fiatsend-mark.svg',
+    iconAlt: '',
     description: (
       <>
         Build reliable payments on mobile money rails with a simple, consistent
@@ -35,9 +35,9 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Secure by design',
-    iconSrc: 'img/icon-white.png',
-    iconAlt: 'Fiatsend icon',
+    title: 'Secure by Design',
+    iconSrc: 'img/fiatsend-mark.svg',
+    iconAlt: '',
     description: (
       <>
         Understand auth, environments, idempotency, and webhooks so you can ship
@@ -50,7 +50,8 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, iconSrc, iconAlt, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
+      <div className={styles.featureCard}>
+      <div>
         <img
           className={styles.featureSvg}
           src={useBaseUrl(iconSrc)}
@@ -58,9 +59,10 @@ function Feature({title, iconSrc, iconAlt, description}: FeatureItem) {
           loading="lazy"
         />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+      </div>
       </div>
     </div>
   );

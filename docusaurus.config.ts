@@ -2,16 +2,31 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// Calm, brand-friendly code colours: One Light / One Dark syntax on Fiatsend grounds
+// (light grey on light, purple-shade-80 on dark).
+const codeThemeLight = {
+  ...prismThemes.oneLight,
+  plain: {...prismThemes.oneLight.plain, backgroundColor: '#F3F3F4'},
+};
+const codeThemeDark = {
+  ...prismThemes.oneDark,
+  plain: {...prismThemes.oneDark.plain, backgroundColor: '#130430'},
+};
+
 const config: Config = {
-  title: 'Fiatsend Docs',
-  tagline: 'Build payments on mobile money rails, powered by stablecoins on Lisk.',
-  favicon: 'img/favicon.ico',
+  title: 'Fiatsend Documentation',
+  tagline: 'Product, recipient, and operations guidance for Fiatsend.',
+  favicon: 'img/fiatsend-mark.svg',
   url: 'https://docs.fiatsend.com',
   baseUrl: '/',
   organizationName: 'fiatsend',
   projectName: 'docs',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -37,12 +52,13 @@ const config: Config = {
     // Used for social sharing previews (OpenGraph/Twitter).
     // Keep it in static/img so it’s always available.
     image: 'img/fiatsend-social-card.png',
+    metadata: [{name: 'theme-color', content: '#5D15F2'}],
     navbar: {
       title: 'Docs',
       logo: {
-        alt: 'Fiatsend Logo',
-        src: 'img/logo-colored.png',
-        srcDark: 'img/logo-white.png',
+        alt: 'Fiatsend',
+        src: 'img/fiatsend-logo.svg',
+        srcDark: 'img/fiatsend-logo-white.svg',
       },
       items: [
         {
@@ -52,8 +68,18 @@ const config: Config = {
           label: 'Documentation',
         },
         {
+          href: 'https://console.fiatsend.com',
+          label: 'Console',
+          position: 'right',
+        },
+        {
+          href: 'https://developer.fiatsend.com',
+          label: 'API Explorer',
+          position: 'right',
+        },
+        {
           href: 'https://app.fiatsend.com',
-          label: 'Launch App',
+          label: 'Wallet',
           position: 'right',
         },
         {
@@ -67,15 +93,17 @@ const config: Config = {
       style: 'dark',
       logo: {
         alt: 'Fiatsend',
-        src: 'img/logo-white.png',
+        src: 'img/fiatsend-logo-white.svg',
+        href: 'https://www.fiatsend.com',
+        width: 132,
       },
       links: [
         {
           title: 'Docs',
           items: [
-            { label: 'Getting Started', to: '/docs/integration/start-here' },
-            { label: 'API Reference', to: '/docs/api/overview' },
-            { label: 'Smart Contracts', to: '/docs/contracts/architecture' },
+            { label: 'Overview', to: '/docs/intro' },
+            { label: 'Console', to: '/docs/products/fiatsend-console' },
+            { label: 'Developer Docs', href: 'https://developer.fiatsend.com' },
           ],
         },
         {
@@ -89,15 +117,15 @@ const config: Config = {
           title: 'More',
           items: [
             { label: 'GitHub', href: 'https://github.com/fiatsend' },
-            { label: 'FiatsendOne App', href: 'https://app.fiatsend.com' },
+            { label: 'Fiatsend Wallet', href: 'https://app.fiatsend.com' },
           ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Fiatsend. All rights reserved.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: codeThemeLight,
+      darkTheme: codeThemeDark,
       additionalLanguages: ['bash', 'json', 'solidity'],
     },
     colorMode: {
