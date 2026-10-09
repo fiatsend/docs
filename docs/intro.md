@@ -1,66 +1,49 @@
 ---
 sidebar_position: 1
 slug: /intro
-title: "Fiatsend Overview"
+title: Fiatsend Overview
 ---
 
 # Fiatsend Overview
 
-Fiatsend is a payments-first mobile money platform powered by web3 rails. Built on stablecoins running on [Lisk Mainnet](https://lisk.com/), Fiatsend enables businesses and individuals to send, receive, and convert digital currency to and from mobile money — with Ghana as the primary market. The platform operates on a B2B2C model: businesses integrate Fiatsend to power reliable local payments for their customers, agents, and merchants.
+Fiatsend is payment infrastructure for businesses paying and getting paid across Africa. A business can send payouts, and collect payments from customers with payment links, invoices, or checkout on its own website.
 
-Whether you are an engineer building on the Fiatsend API, a compliance officer evaluating the platform's KYC tiers, or a partner exploring integration, these docs will walk you through everything you need to get started.
+For a payout, a business sends a request; Fiatsend locks the conversion, applies compliance controls, and delivers funds to the recipient's Fiatsend wallet.
 
-## Core Capabilities
+Recipients can keep funds in their wallet or choose an available local settlement method. A recipient who is new to Fiatsend receives a secure link to finish onboarding and claim the payout—funds are not lost because an account did not exist at the time of payment.
 
-| Capability | Description |
+## Start in the Right Place
+
+| You want to… | Start here |
 |---|---|
-| **Local Payments** | Send and receive payments via mobile money providers like MTN Mobile Money, Telecel Cash, and AirtelTigo in Ghana. |
-| **Stablecoin Conversion** | Convert between stablecoins (USDC, USDT, DAI, and more) and local currency (GHS) with transparent fees. |
-| **GHSFIAT Stablecoin** | Fiatsend's native GHS-pegged stablecoin for on-chain local currency settlement. [Learn more →](/docs/platform/ghsfiat) |
-| **MobileNumber NFT** | An encrypted, privacy-preserving NFT tied to the user's phone number, used for identity and tiered access control. [Learn more →](/docs/platform/mobilenumber-nft) |
-| **QR / Scan-to-Pay** | Merchants and agents accept payments instantly through QR code scanning in the FiatsendOne app. |
-| **Payout to Mobile Money** | Settle funds directly to mobile money wallets across supported providers and countries. |
-| **Bulk Disbursements** | Businesses can send payments to multiple recipients in a single batch — ideal for payroll and supplier payments. |
+| Receive, hold, or settle money | [Fiatsend Wallet](/docs/products/fiatsend-one) |
+| Understand a received payment | [Managing funds](/docs/account/managing-funds) |
+| Manage a business account | [Fiatsend Console](/docs/products/fiatsend-console) |
+| Get paid by customers | [Accepting payments](/docs/payments/overview): [payment links](/docs/payments/payment-links), [invoices](/docs/payments/invoices) |
+| Take payments on my website | [Website Checkout](/docs/payments/website-checkout) |
+| Check business use cases and coverage | [Use cases](/docs/products/use-cases) and [Coverage](/docs/platform/coverage) |
+| Build an integration | [Developer Documentation](https://developer.fiatsend.com) |
 
-## Who These Docs Are For
+## How a Payout Works
 
-- **Engineers** — Integrate the Fiatsend API into your application, understand the smart contract architecture, or build on top of Fiatsend's infrastructure.
-- **Compliance & Operations** — Review KYC tier requirements, transaction limits, fee structures, and supported corridors.
-- **Partners & Businesses** — Evaluate Fiatsend's coverage, use cases, and B2B2C integration model for your payment needs.
+1. A business creates a payout in [Fiatsend Console](/docs/products/fiatsend-console) or through the Fiatsend API.
+2. Fiatsend validates the request, locks the applicable conversion, and runs required controls.
+3. Funds arrive in the recipient's Fiatsend wallet (or settle via the configured Stellar / local rail).
+4. The recipient holds the balance or uses an available settlement option, including automatic settlement where enabled.
 
-## Architecture Overview
-
-At a high level, the Fiatsend platform follows this flow:
-
-```
-┌──────────────┐     ┌──────────────┐     ┌─────────────────────────┐     ┌──────────────────────┐
-│ FiatsendOne  │────▶│  Fiatsend    │────▶│  Lisk Mainnet Smart     │────▶│  Mobile Money         │
-│  App / API   │     │  Backend     │     │  Contracts              │     │  Providers            │
-│              │     │             │     │  (FiatsendGatewayV2)    │     │  (MTN, Telecel, etc.) │
-└──────────────┘     └──────────────┘     └─────────────────────────┘     └──────────────────────┘
-```
-
-1. **FiatsendOne App** — The primary user-facing application available at [app.fiatsend.com](https://app.fiatsend.com). Users authenticate via wallet-based login (Privy) with JWT sessions.
-2. **Fiatsend Backend** — The backend handles authentication, transaction orchestration, KYC management, and API routing.
-3. **Lisk Mainnet Smart Contracts** — The `FiatsendGatewayV2` contract (UUPS upgradeable, built with Hardhat) manages on-chain stablecoin operations including conversions, GHSFIAT minting/redemption, and MobileNumber NFT issuance.
-4. **Mobile Money Providers** — Final settlement happens through local mobile money networks (MTN Mobile Money, Telecel Cash, AirtelTigo in Ghana).
-
-:::info
-Fiatsend uses **Lisk Mainnet** as its blockchain layer. All on-chain operations — stablecoin transfers, GHSFIAT minting, and MobileNumber NFT issuance — happen on Lisk.
+:::info Developer documentation
+This site explains the Fiatsend product and how to use it, including the [Website Checkout](/docs/payments/website-checkout) integration guide. The full API contract, SDKs, sandbox, and endpoint reference are maintained at [developer.fiatsend.com](https://developer.fiatsend.com).
 :::
 
-## Quick Links
+## How a Customer Payment Works
 
-| Section | What You'll Find |
-|---|---|
-| [Coverage](/docs/platform/coverage) | Supported countries, mobile money providers, and operation status |
-| [Supported Stablecoins](/docs/platform/stablecoins) | All stablecoins available on the platform |
-| [Fees & Limits](/docs/platform/fees-and-limits) | Transaction fees, KYC tier limits, and settlement timing |
-| [GHSFIAT Stablecoin](/docs/platform/ghsfiat) | Deep dive into Fiatsend's native GHS-pegged stablecoin |
-| [MobileNumber NFT](/docs/platform/mobilenumber-nft) | Identity, tiers, and privacy-preserving NFT design |
-| [FiatsendOne](/docs/products/fiatsend-one) | The primary app for users, agents, and merchants |
-| [Use Cases](/docs/products/use-cases) | How merchants, agents, consumers, and businesses use Fiatsend |
+1. A business creates a payment link, an invoice, or a checkout on its website, and chooses how customers can pay: Fiatsend checkout, mobile money, or bank transfer.
+2. The customer pays. With Fiatsend checkout the payment is confirmed automatically; with mobile money or bank transfer the customer says they've sent it and the business confirms.
+3. The customer gets a receipt, and the business sees the payment's status in [Fiatsend Console](/docs/products/fiatsend-console).
 
-:::tip Getting Started
-If you're a developer, start with the [FiatsendOne](/docs/products/fiatsend-one) product overview, then explore [Supported Stablecoins](/docs/platform/stablecoins) and [Fees & Limits](/docs/platform/fees-and-limits) to understand the platform mechanics.
-:::
+See [Accepting payments](/docs/payments/overview) for the details.
+
+## What Fiatsend Is Not
+
+Fiatsend is a payment technology company, not a bank. Funds held in a Fiatsend wallet are not bank deposits and are not covered by government deposit insurance.
+

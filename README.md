@@ -1,41 +1,24 @@
-# Website
+# Fiatsend Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repository powers [docs.fiatsend.com](https://docs.fiatsend.com), Fiatsend's product and operations documentation.
 
-## Installation
+## Documentation boundaries
 
-```bash
-yarn
-```
+- **docs.fiatsend.com** explains the Fiatsend product, recipient experience, business operations, coverage, fees, security, and support.
+- **developer.fiatsend.com** is the source of truth for API contracts, SDKs, sandbox, webhooks, and all integration guidance.
 
-## Local Development
+Do not duplicate API references, endpoint examples, OpenAPI specifications, credentials, or webhook implementation details in this repository. Link to the developer portal instead.
 
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+## Local development
 
 ```bash
-yarn build
+npm install
+npm run start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+Build the site before publishing:
 
 ```bash
-USE_SSH=true yarn deploy
+npm run build
 ```
 
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
