@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fiatsend-docs",
+  "account_id": "9ad8503ae664b80c03e83561f96322dc",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./build",
+    "not_found_handling": "404-page"
+  },
+  "routes": [{ "pattern": "docs.fiatsend.com", "custom_domain": true }]
+}
