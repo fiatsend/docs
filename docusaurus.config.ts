@@ -19,6 +19,10 @@ const config: Config = {
   favicon: 'img/fiatsend-mark.svg',
   url: 'https://docs.fiatsend.com',
   baseUrl: '/',
+  // The host (Cloudflare Workers static assets, auto-trailing-slash) serves each page at
+  // /docs/foo/ and redirects /docs/foo there, so canonicals, the sitemap and internal
+  // links must use the slash form too, or Google sees every canonical as a redirect.
+  trailingSlash: true,
   organizationName: 'fiatsend',
   projectName: 'docs',
   onBrokenLinks: 'throw',
