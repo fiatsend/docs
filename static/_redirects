@@ -1,0 +1,43 @@
+# Permanent redirects, applied by Cloudflare Workers static assets before any file is served.
+# Docusaurus copies this file to build/_redirects. Each old page is listed with and without
+# the trailing slash, since rules match the path exactly.
+#
+# Removed Partner API pages now live on the developer portal.
+
+/docs/partner-api/start-here          https://developer.fiatsend.com/#introduction 301
+/docs/partner-api/start-here/         https://developer.fiatsend.com/#introduction 301
+/docs/choose-integration              https://developer.fiatsend.com/#introduction 301
+/docs/choose-integration/             https://developer.fiatsend.com/#introduction 301
+/docs/partner-api/authentication      https://developer.fiatsend.com/#authentication 301
+/docs/partner-api/authentication/     https://developer.fiatsend.com/#authentication 301
+/docs/partner-api/environments        https://developer.fiatsend.com/#sandbox-live 301
+/docs/partner-api/environments/       https://developer.fiatsend.com/#sandbox-live 301
+/docs/resources/sandbox-and-testing   https://developer.fiatsend.com/#sandbox-live 301
+/docs/resources/sandbox-and-testing/  https://developer.fiatsend.com/#sandbox-live 301
+/docs/partner-api/sdk-rest            https://developer.fiatsend.com/#sdks 301
+/docs/partner-api/sdk-rest/           https://developer.fiatsend.com/#sdks 301
+/docs/partner-api/webhooks            https://developer.fiatsend.com/#webhooks 301
+/docs/partner-api/webhooks/           https://developer.fiatsend.com/#webhooks 301
+/docs/partner-api/payment-intents     https://developer.fiatsend.com/#api-payment-intents 301
+/docs/partner-api/payment-intents/    https://developer.fiatsend.com/#api-payment-intents 301
+/docs/partner-api/withdrawals         https://developer.fiatsend.com/#api-withdrawals 301
+/docs/partner-api/withdrawals/        https://developer.fiatsend.com/#api-withdrawals 301
+/docs/partner-api/errors-rate-limits  https://developer.fiatsend.com/#error-codes 301
+/docs/partner-api/errors-rate-limits/ https://developer.fiatsend.com/#error-codes 301
+/docs/partner-api/openapi             https://developer.fiatsend.com/fiatsend-openapi.yaml 301
+/docs/partner-api/openapi/            https://developer.fiatsend.com/fiatsend-openapi.yaml 301
+/docs/partner-api/idempotency         https://developer.fiatsend.com/ 301
+/docs/partner-api/idempotency/        https://developer.fiatsend.com/ 301
+/docs/integration/idempotency         https://developer.fiatsend.com/ 301
+/docs/integration/idempotency/        https://developer.fiatsend.com/ 301
+/docs/platform/networks-and-assets    https://developer.fiatsend.com/#api-networks 301
+/docs/platform/networks-and-assets/   https://developer.fiatsend.com/#api-networks 301
+
+# Pages that moved within this site.
+/docs/platform/stablecoins            /docs/platform/coverage/ 301
+/docs/platform/stablecoins/           /docs/platform/coverage/ 301
+/docs/account/subaccounts-and-roles   /docs/account/access/ 301
+/docs/account/subaccounts-and-roles/  /docs/account/access/ 301
+
+# Old versioned OpenAPI downloads.
+/assets/files/fiatsend-partner-api-*.yaml https://developer.fiatsend.com/fiatsend-openapi.yaml 301
