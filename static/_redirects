@@ -39,5 +39,17 @@
 /docs/account/subaccounts-and-roles   /docs/account/access/ 301
 /docs/account/subaccounts-and-roles/  /docs/account/access/ 301
 
+# Retired pages (removed in the October 2026 docs refresh), sent to the closest current page.
+/docs/partner-api/sdk-onchain            https://developer.fiatsend.com/#sdks 301
+/docs/partner-api/sdk-onchain/           https://developer.fiatsend.com/#sdks 301
+/docs/platform/ghsfiat                   /docs/platform/coverage/ 301
+/docs/platform/ghsfiat/                  /docs/platform/coverage/ 301
+/docs/contracts/architecture             /docs/platform/coverage/ 301
+/docs/contracts/architecture/            /docs/platform/coverage/ 301
+/docs/resources/rewards-and-community    /docs/resources/support/ 301
+/docs/resources/rewards-and-community/   /docs/resources/support/ 301
+/docs/resources/changelog                /docs/intro/ 301
+/docs/resources/changelog/               /docs/intro/ 301
+
 # Old versioned OpenAPI downloads.
 /assets/files/fiatsend-partner-api-*.yaml https://developer.fiatsend.com/fiatsend-openapi.yaml 301
